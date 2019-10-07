@@ -5,6 +5,12 @@
 	<!-- configure only classes not interfaces -->
 	<!-- can map with jsp usebean -->
 	<bean id="Pyare Mohan" class="com.zensar.spring.performers.Juggler">
-	<constructor-arg value="6"></constructor-arg>
+		<constructor-arg value="6"></constructor-arg>
 	</bean>
+	<bean id="twinkel" class="com.zensar.spring.poems.TwinkelTwinkel"></bean>
+	<bean id="Katrina Kaif" class="com.zensar.spring.performers.PoeticJuggler">
+		<constructor-arg value="7"></constructor-arg>
+		<constructor-arg ref="twinkel"></constructor-arg>
+	</bean>
+	
 </beans>

@@ -17,5 +17,5 @@ public class Juggler implements Performer {
 		// TODO Auto-generated method stub
 		System.out.println("Juggler Juggling Bean Bags "+ beanBags);
 	}
-
+	
 }

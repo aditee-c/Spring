@@ -11,10 +11,10 @@ public class SpringMain {
 		// TODO Auto-generated method stub
 		//creating the object of spring ioc container
 		ApplicationContext ctx= new ClassPathXmlApplicationContext("greetings.xml");
-		Greeting g = ctx.getBean("anniversary", Greeting.class);
-		System.out.println(g.greet());
+		Greeting g = ctx.getBean("festive", Greeting.class);
+		//System.out.println(g.greet());
 		Greeting g1 = ctx.getBean("festive", Greeting.class);
-		System.out.println(g1.greet());
+		//System.out.println(g1.greet());
 	}
 
 }

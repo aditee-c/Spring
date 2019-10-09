@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+	<!-- configure only classes not interfaces -->
+	<!-- can map with jsp usebean -->
+	<bean id="guitar" class="com.zensar.spring.instruments.Guitar"></bean>
+	<bean id="piano" class="com.zensar.spring.instruments.Piano"></bean>
+	<bean id="Saif Ali Khan"
+		class="com.zensar.spring.performers.Instrumentalist">
+		<!-- Setter Injection -->
+		<property name="instrument" ref="guitar"></property>
+		<property name="song" value="Hum to udd gaye "></property>
+	</bean>
+	<bean id="taimur" parent="Saif Ali Khan">
+		<property name="song" value="Dil Chahta Hai!!!! "></property>
+	</bean>
+	<bean id="Aditee" parent="taimur">
+		<property name="instrument" ref="piano"></property>
+	</bean>
+</beans>

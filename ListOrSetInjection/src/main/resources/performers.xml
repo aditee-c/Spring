@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+	<!-- configure only classes not interfaces -->
+	<!-- can map with jsp usebean -->
+	<bean id="guitar" class="com.zensar.spring.instruments.Guitar"></bean>
+	<bean id="piano" class="com.zensar.spring.instruments.Piano"></bean>
+	<bean id="tabla" class="com.zensar.spring.instruments.Tabla"></bean>
+	<bean id="Saif Ali Khan" class="com.zensar.spring.performers.Instrumentalist">
+	<!-- Setter Injection -->
+		<property name="instruments">
+			<list><!-- It follows set type not allow duplicate because in instrumentalist we declared set collection-->
+				<ref bean="guitar" />
+				<ref bean="piano" />
+				<ref bean="guitar" />
+				<ref bean="tabla" />
+			</list>
+		</property>
+		<property name="song" value="Hum to udd gaye "></property>
+
+	</bean>
+	
+</beans>

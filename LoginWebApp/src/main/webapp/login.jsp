@@ -8,7 +8,7 @@
 </head>
 <body>
 ${logonerror}
-<form action="login" method="get">
+<form action="login" method="post">
 <input type="text" name="username" placeholder="Enter User Name">
 <input type="password" name="password" placeholder="Enter Password">
 <input type="submit" value="submit">
